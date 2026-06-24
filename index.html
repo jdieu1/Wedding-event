@@ -234,22 +234,48 @@
       <p>Please confirm your attendance</p>
     </div>
 
-    <form id="rsvpForm">
+<form
+  action="https://formspree.io/f/mpqgwyqw"
+  method="POST"
+  class="rsvp-form"
+>
 
-      <input type="text" placeholder="Full Name" required>
+    <input
+      type="text"
+      name="fullname"
+      placeholder="Full Name"
+      required
+    >
 
-      <input type="email" placeholder="Email Address" required>
+    <input
+      type="email"
+      name="email"
+      placeholder="Email Address"
+      required
+    >
 
-      <input type="number" placeholder="Number of Guests">
+    <input
+      type="number"
+      name="guests"
+      placeholder="Number of Guests"
+    >
 
-      <textarea placeholder="Message"></textarea>
+    <textarea
+      name="message"
+      placeholder="Leave a Message"
+    ></textarea>
 
-      <button type="submit">
-        Confirm Attendance
-      </button>
+<input
+  type="hidden"
+  name="_next"
+  value="https://yourwebsite.com/thank-you.html"
+>
 
-    </form>
+    <button type="submit">
+      Confirm Attendance
+    </button>
 
+</form>
     <p id="successMessage"></p>
 
   </section>
@@ -274,6 +300,28 @@
     <h3>Emmanuel & Diane</h3>
     <p>Made with ❤️ | Wedding 2026</p>
   </footer>
+
+<!-- GALLERY LIGHTBOX -->
+
+<div class="lightbox" id="lightbox">
+
+    <span class="close-lightbox" id="closeLightbox">
+        &times;
+    </span>
+
+    <img id="lightboxImg" src="" alt="">
+
+</div>
+
+<!-- BACKGROUND MUSIC -->
+
+<audio id="weddingMusic" loop>
+    <source src="music/Alan_Walker,_Sabrina_Carpenter_&_Farruko__-_On_My_Way(128k).mp3" type="audio/mpeg">
+</audio>
+
+<button class="music-btn" id="musicBtn">
+    🎵 Play Music
+</button>
 
   <script src="index.js"></script>
 
